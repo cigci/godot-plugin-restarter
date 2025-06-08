@@ -13,6 +13,7 @@ func _input(event: InputEvent) -> void:
 		event.keycode == KEY_A
 		and event.shift_pressed
 		and event.ctrl_pressed
+		and event.pressed
 	):
 		for plugin in get_all_plugins():
 			EditorInterface.set_plugin_enabled(plugin, false)
@@ -24,6 +25,7 @@ func _input(event: InputEvent) -> void:
 		event.keycode == KEY_S
 		and event.shift_pressed
 		and event.ctrl_pressed
+		and event.pressed
 	):
 		for plugin in selected_plugins:
 			EditorInterface.set_plugin_enabled(plugin, false)
